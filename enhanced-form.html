@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Page & Form</title>
+
+    <style>
+        body {
+            font-family: Arial,sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #FFDAB9;
+            color: #333;
+        }
+
+        header,main,footer {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px,
+        }
+
+        header {
+            background:crimson;
+            color:white;
+            text-align: center;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2,legend{
+            color: crimson;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top : 10px;
+        }
+
+        table,th,td {
+            border: 1px solid #ccc;
+        }
+
+        th,td {
+            padding: 10px;
+            text-align: left; 
+        }
+
+        img,video {
+            max-width: 100%;
+            border-radius: 6px;
+        }
+
+        form {
+            display:grid;
+            gap: 15px;
+        }
+
+        feildset {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #4f46e5;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input,select,textarea,button {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background: crimson;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #a10024;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>HTML Lists,Tables,Media & Form</h1>
+    <p>Demonstrating structured content and native HTML5 form validation</p>
+</header>
+
+<main>
+
+    <!-- LIST SECTION -->
+     <section>
+        <h2>Favourite Fruits (Unordered List)</h2>
+        <ul>
+            <li>Apples</li>
+            <li>Bananas</li>
+            <li>Strawberries</li>
+        </ul>
+
+        <h2>Daily Routine (Ordered List)</h2>
+        <ol>
+            <li>Wake up</li>
+            <li>Brush teeth</li>
+            <li>Have breakfast</li>
+            <li>Go to work</li>
+            <li>Return home</li>
+            <li>Have dinner</li>
+            <li>Watch TV</li>
+            <li>Go to sleep</li>
+        </ol>
+    </section>
+
+    <!-- TABLE SECTION -->
+    <section>
+        <h2>Classmates Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Favourite Subject</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Snow</td>
+                    <td>Life Science</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>Ama</td>
+                    <td>Math</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>Thabo</td>
+                    <td>Science</td>
+                    <td>15</td>
+                </tr>  
+            </tbody>
+        </table>
+    </section>
+
+    <!-- MEDIA SECTION -->
+    <section>
+        <h2>Media Examples</h2>
+        <figure>
+            <img src="images.jpg" alt="Sample Image">
+            <figcaption>Sample Image</figcaption>
+        </figure>
+
+        <h3>Audio <Example>
+            <audio controls>
+                <source src="Kanye West - Good Morning.mp3" type ="audio/mpeg">
+                Your browser does not support audio playback.
+                </audio>
+
+        <h3>Video Example</h3>
+        <video controls>
+            <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+            Your browser does not support video playback.
+        </video>
+    </section>
+
+    <!-- FORM SECTION -->
+    <section>
+        <h2>Registration Form</h2>
+        <form action="#" method="post">
+
+           <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required minlength="3">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g. 012-345-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Account Details</legend>
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Choose a username" required minlength="4" maxlength="15">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required minlength="6">
+
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter password" required minlength="6">
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferences</legend>
+
+                <label for="fav-subject">Favourite Subject:</label>
+                <select id="fav-subject" name="fav-subject" required>
+                    <option value="">--Select--</option>
+                    <option value="math">Math</option>
+                    <option value="science">Science</option>
+                    <option value="english">English</option>
+                </select>
+
+                <label>Subscribe to newsletter?</label>
+                <input type="radio" id="yes" name="subscribe" value="yes" required>
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="subscribe" value="no">
+                <label for="no">No</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Comments</legend>
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Your comments..."></textarea>
+            </fieldset>
+
+            <button type="submit">Submit Form</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p style="text-align:center; padding:10px;">&copy; 2025 Sinovuyo Volo. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
